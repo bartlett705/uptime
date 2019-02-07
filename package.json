@@ -4,8 +4,8 @@
   "description": "serves uptime",
   "main": "src/index.ts",
   "scripts": {
-    "start": "forever --watch -m 5 -o ../famous-quotes.test.log --append -c \"ts-node\" src/index.ts --colors",
-    "start:production": "BUILD_TYPE=prod forever --watch -m 5 -o ../famous-quotes.prod.log --append -c \"ts-node\" src/index.ts --colors"
+    "start": "forever --watch -m 5 -o ../uptime.test.log --append -c \"ts-node\" src/index.ts --colors",
+    "start:production": "BUILD_TYPE=prod forever --watch -m 5 -o ../uptime.prod.log --append -c \"ts-node\" src/index.ts --colors"
   },
   "author": "Ahmad Kanawi",
   "license": "MIT",

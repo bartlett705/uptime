@@ -47,7 +47,7 @@ app.use(routes)
 app.listen(config.port)
 
 logger.warn('hi yall ^_^')
-console.log(
+logger.info(
   chalk.greenBright(`uptime backend is running on port ${config.port} | `),
   chalk.greenBright('build type:'),
   config.buildType === BuildType.Production
