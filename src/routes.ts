@@ -31,28 +31,6 @@ router.get('/', async (ctx: Koa.Context) => {
   }
 })
 
-// async function queryDB(
-//   logger: Logger,
-//   client: Client,
-//   query: string,
-//   params?: any
-// ) {
-//   return new Promise<QueryResult | null>(async (res, _) => {
-//     try {
-//       logger.debug('QUERY:', query)
-//       const result = await client.query(query, params)
-//       if (result.rows) {
-//         logger.debug(`Returning ${result.rows.length} rows`)
-//       }
-//       res(result)
-//     } catch (err) {
-//       logger.error('hrm')
-//       logger.error(err)
-//       res(null)
-//     }
-//   })
-// }
-
 export const routes = router.routes()
 
 function promisify(child: ChildProcess) {
