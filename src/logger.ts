@@ -31,9 +31,7 @@ export class Logger {
   public debug: (...args: any) => void
   public externalCall: (...args: any) => void
 
-  private logLevel: number
   constructor(logLevel: number) {
-    this.logLevel = logLevel
     this.error = (...args: any) => console.log(error(...args))
     this.warn =
       logLevel > 0 ? (...args: any) => console.log(warn(...args)) : noOp
