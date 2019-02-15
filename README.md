@@ -1,6 +1,7 @@
 # Uptime script!
 
 _Returns the result of running uptime in a minimal HTML template_
+
 100% Secure™️️
 
 ## Usage
