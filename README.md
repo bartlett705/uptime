@@ -10,3 +10,6 @@ _Returns the result of running uptime in a minimal HTML template_
 - Run `npm run start:production`
 - Include the provided `nginx.conf`, or otherwise expose the node service started on port `7323`.
 - Visit the host at `/uptime` to see stats.
+
+### See Also
+- [https://github.com/bartlett705/lambda-uptime](Lambda for pushing updates to discord)
