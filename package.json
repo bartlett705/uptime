@@ -4,8 +4,9 @@
   "description": "serves uptime",
   "main": "src/index.ts",
   "scripts": {
-    "start": "forever --watch -m 5 -o ../uptime.test.log --append -c \"ts-node\" src/index.ts --colors",
-    "start:production": "BUILD_TYPE=prod forever --watch -m 5 -o ../uptime.prod.log --append -c \"ts-node\" src/index.ts --colors"
+    "start": "forever --watch -m 5 -o log/uptime.test.log --append -c \"ts-node\" src/index.ts --colors",
+    "start:production": "BUILD_TYPE=prod forever --watch -m 5 -o log/uptime.prod.log --append -c \"ts-node\" src/index.ts --colors",
+    "docker": "docker run -p 7323:7323 -v ../:log/ uptime"
   },
   "author": "Ahmad Kanawi",
   "license": "MIT",
