@@ -48,6 +48,7 @@ function promisify(child: ChildProcess) {
   })
 }
 
+const siteName = process.env.SITE_NAME || 'Chaitown'
 const template = (uptimeOutput: string): string => `<html>
   <head>
     <title>Mosey Systems Chaitown Uptime</title>
@@ -60,7 +61,7 @@ const template = (uptimeOutput: string): string => `<html>
     </style>
   </head>
   <body>
-    <h1>Mosey Systems Chaitown Uptime</h1>
+    <h1>Mosey Systems ${siteName} Uptime</h1>
     | ${uptimeOutput} |
     </body>
 </html>`
