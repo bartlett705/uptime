@@ -6,7 +6,9 @@
   "scripts": {
     "start": "forever --watch -m 5 -o log/uptime.test.log --append -c \"ts-node\" src/index.ts --colors",
     "start:production": "BUILD_TYPE=prod forever --watch -m 5 -o log/uptime.prod.log --append -c \"ts-node\" src/index.ts --colors",
-    "build": "docker build -t uptime ."
+    "start:production:tsnode": "BUILD_TYPE=prod forever --watch -m 5 -o log/uptime.prod.log --append -c \"ts-node\" src/index.ts --colors",
+    "build": "tsc",
+    "build:docker": "docker build -t uptime ."
   },
   "author": "Ahmad Kanawi",
   "license": "MIT",
