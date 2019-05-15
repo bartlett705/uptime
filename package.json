@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "forever --watch -m 5 -o log/uptime.test.log --append -c \"ts-node\" src/index.ts --colors",
-    "start:production": "BUILD_TYPE=prod node_modules/.bin/forever --watch -m 5 -o ../uptime.prod.log --append src/index.js --colors",
+    "start:production": "npm run build && BUILD_TYPE=prod node_modules/.bin/forever --watch -m 5 -o ../uptime.prod.log --append build/index.js --colors",
     "start:production:tsnode": "BUILD_TYPE=prod forever --watch -m 5 -o log/uptime.prod.log --append -c \"ts-node\" src/index.ts --colors",
     "build": "tsc",
     "build:docker": "docker build -t uptime ."
