@@ -31,6 +31,9 @@ router.get('/', async (ctx: Koa.Context) => {
   }
 })
 
+router.post("/post", async (ctx: Koa.Context) => {
+  ctx.redirect("/foobar")
+})
 export const routes = router.routes()
 
 function promisify(child: ChildProcess) {
